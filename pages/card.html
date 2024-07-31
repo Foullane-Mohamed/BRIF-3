@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تصنيف التربة - مدينة أسفي</title>
+    <title></title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../style/card.css">
+    <script>
+        //fuction pour scroller a paragraphe  detecter par Id
+        function redirectToSection(sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+      //pour appliquer des animations ou des effets de style uniquement lorsque les éléments sont visibles à l'écran.
+    document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate-on-scroll');//stocker les element de classe 'animate-on-scroll' dans variable element 
+
+    function checkVisibility() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check in case elements are already visible
+});
+
+
+    </script>
     
 </head>
 <body>
@@ -37,47 +66,48 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="captionText">
+        <div class="container  animate-on-scroll">
+            <div class="captionText animate-on-scroll">
                 <p>
-                    safi
+                  Cette figure illustre les échantillons collectés à divers endroits dans la région de Safi. Pour chaque point d'échantillonnage, des mesures ont été effectuées afin de déterminer plusieurs paramètres du sol, notamment le pH, la teneur en matière organique, la concentration en phosphore, et les niveaux de potassium. Ces données permettent de caractériser les propriétés du sol à travers différents sites, fournissant des informations précieuses pour des analyses agricoles ou environnementales.
                    </p>
                </div>
-        <section id="map-container">
-           
-               
+        <div class="map-container animate-on-scroll">     
             <div id="map"></div>
-        </section>
+        </div>
     </div>
     </main>
-    <div class="titre"><h3>les élément de fertilisation</h3> </div>
-    <div class="card-container" id="redirectButton">
+    <div class="titre animate-on-scroll"><h3>les élément de fertilisation</h3> </div>
+    <div class="card-container  animate-on-scroll" id="redirectButton">
         
-        <div class="card">
-          <img src="../images/azote.png" alt="" srcset="">
-          <div class="card-content">
+        <div class="card animate-on-scroll">
+          <img src="../images/azote.png" alt="" srcset=" " class="animate-on-scroll">
+          <div class="card-content animate-on-scroll">
           <h3>Azote</h3>
        <p >
-        L'azote est un élément tout aussi crucial et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
+        L'azote est un élément et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
        </p>
     </div>
     </div>
-    <div class="card">
-        <img src="../images/phosphore.png" alt="" srcset="">
-        <div class="card-content">
-        <h3>phosphore</h3>
-     <p >
-      L'azote est un élément tout aussi crucial et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
-     </p>
+    <div class="card animate-on-scroll">
+        <img src="../images/phosphore.png" alt="" srcset="" class="animate-on-scroll">
+        <div class="card-content animate-on-scroll">
+        <h3>Phosphore</h3>
+        <p>
+            Le phosphore est crucial pour la nutrition des plantes, jouant un rôle clé dans leur croissance. Il est essentiel pour la formation des acides nucléiques comme l'ADN et l'ARN, ainsi que pour les membranes cellulaires. Métaboliquement, il est un composant de l'ATP, la molécule qui stocke et transfère l'énergie nécessaire à des processus vitaux tels que la photosynthèse et la croissance des racines. Un apport suffisant en phosphore est donc indispensable pour des cultures saines et productives.
+          </p>
+          
+          
     </div>
     </div>
-    <div class="card">
-        <img src="../images/potassium.png" alt="" srcset="">
-        <div class="card-content">
-        <h3>potasume</h3>
-     <p >
-      L'azote est un élément tout aussi crucial et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
-     </p>
+    <div class="card animate-on-scroll">
+        <img src="../images/potassium.png" alt="" srcset="" class="animate-on-scroll">
+        <div class="card-content animate-on-scroll">
+        <h3>Potassium</h3>
+        <p>
+            Le potassium est un nutriment essentiel pour la santé des plantes, influençant plusieurs aspects de leur développement. Il régule l'équilibre hydrique en contrôlant l'ouverture et la fermeture des stomates, ce qui aide à la gestion de l'eau et à la photosynthèse. Le potassium est également crucial pour la synthèse des protéines et la formation des enzymes, contribuant ainsi à la croissance des racines, à la résistance aux maladies, et à la qualité des fruits et des graines. Un apport adéquat en potassium favorise des plantes plus robustes et productives.
+          </p>
+          
     </div>
     </div>
        </div>
@@ -87,6 +117,102 @@
         <img class="modal-content" id="img01">
         <div id="caption"></div>
       </div>
+
+      <div class="titre animate-on-scroll"><h3>autres éléments</h3> </div>
+    <div class="tabl">
+      <table border="2" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Élément</th>
+            <th>Rôle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="element">Calcium</td>
+            <td>Le calcium est nécessaire à la synthèse de la pectine dans la membrane cellulaire. Il intervient également dans la formation du noyau et des mitochondries. Les arbres luxuriants consomment une grande quantité de calcium, en faisant le composant le plus important en termes de quantité.</td>
+          </tr>
+          <tr>
+            <td class="element">Magnésium</td>
+            <td>Le magnésium intervient dans l’activation de plusieurs enzymes végétales requises pour la croissance et contribue à la synthèse des protéines. Il est également un constituant de la chlorophylle.</td>
+          </tr>
+          <tr>
+            <td class="element">Soufre</td>
+            <td>Le soufre est utilisé dans la formation des acides aminés et des structures vitaminiques. Son rôle est étroitement lié à celui de l'azote.</td>
+          </tr>
+          <tr>
+            <td class="element">Fer</td>
+            <td>Le fer est un constituant de plusieurs enzymes telles que la ferrédoxine et le cytochrome. Il permet également de réduire le taux de nitrate et de sulfate dans la plante.</td>
+          </tr>
+          <tr>
+            <td class="element">Zinc</td>
+            <td>Le zinc est important dans le métabolisme de l’auxine, régulant la croissance et l'élongation des tiges. Il active également plusieurs systèmes enzymatiques responsables de la synthèse de certaines protéines.</td>
+          </tr>
+          <tr>
+            <td class="element">Cuivre</td>
+            <td>Le cuivre est primordial pour la synthèse de la lignine. Il est essentiel dans le processus de photosynthèse, la respiration, et le métabolisme des glucides et des protéines.</td>
+          </tr>
+          <tr>
+            <td class="element">Bore</td>
+            <td>Le bore joue un rôle dans la translocation des sucres et des glucides, la pollinisation, et le développement des fruits et des graines. Il intervient également dans la croissance méristématique (division cellulaire).</td>
+          </tr>
+          <tr>
+            <td class="element">Molybdène</td>
+            <td >Le molybdène est crucial pour la conversion du nitrate en nitrite, puis en ammoniac, utilisé pour la synthèse des acides aminés. Il est également nécessaire à la chlorophylle et participe à la fixation de l’azote.</td>
+          </tr>
+          <tr>
+            <td class="element">Chlore</td>
+            <td>Le chlorure est requis en petites quantités et aide au métabolisme de la plante, à la photosynthèse, à l'osmose, ainsi qu'à l'équilibre ionique dans les cellules.</td>
+          </tr>
+          <tr>
+            <td class="element">Nickel</td>
+            <td>Le nickel entre dans la composition de l’uréase, responsable du métabolisme de l'azote uréique en ammoniac utilisable par la plante. Il est aussi utilisé comme catalyseur dans les enzymes aidant les légumineuses à fixer l'azote.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      <footer>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Liens Utiles</h4>
+            <ul>
+                <li><a href="#">Analyse de Sol</a></li>
+                <li><a href="#">Consultation</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="#">Blog</a></li>
+
+
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="#">Adresse : Rue de l'Exemple, Ville, Pays</a></li>
+                <li><a href="#">Email : info@example.com</a></li>
+                <li><a href="#">Téléphone : 123-456-7890</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4> Suivez-nous
+
+            </h4>
+            <div class="links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
       
       <script>
         // Récupère la modal
