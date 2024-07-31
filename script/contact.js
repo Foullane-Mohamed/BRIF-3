@@ -25,3 +25,18 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       console.error('Error:', error);
   });
 });
+// navbar
+
+function toggleMenu() {
+  const menu = document.querySelector('.navbar-menu');
+  menu.classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      dropdownMenu.classList.toggle('show');
+  });
+});
