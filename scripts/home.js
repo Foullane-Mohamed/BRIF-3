@@ -1,3 +1,4 @@
+/*Nav-bar design*/
 // fonction to toggle menu for mobile
 function toggleMenu() {
     const navbarMenu = document.querySelector('.navbar-menu');
@@ -23,8 +24,9 @@ function toggleMenu() {
       document.querySelector('.navbar-menu').classList.remove('active');
     }
   });
-
-  let index = 0;
+/* end Nav-bar */
+ 
+/*let index = 0;
 
 function showSlide(n) {
   const slides = document.querySelector('.slides');
@@ -49,4 +51,32 @@ function prevSlide() {
 // Optional: Auto slide every 5 seconds
 setInterval(nextSlide, 5000);
 
-  
+  */
+/***********Carousel script********************* */
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  if (index >= totalSlides) {
+      currentSlide = 0;
+  } else if (index < 0) {
+      currentSlide = totalSlides - 1;
+  } else {
+      currentSlide = index;
+  }
+
+  slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Auto-slide
+setInterval(nextSlide, 5000);

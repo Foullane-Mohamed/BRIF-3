@@ -1,60 +1,29 @@
+/* HTML BODY design */
+body, html {
 
-  body, html {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    height: 100%;
-  }
+ 
 
-
-  /*
-/* Nav-Bar  Style 
-nav {
-    background-color: #673801;
-    padding: 0.5%;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-    
-    ul {
-	    list-style: none;
-	    justify-items: center;
-	    overflow:hidden;
-	    float:center;
-	    margin: 0;
-        
-        li {
-	        float:left;
-	        align-items: center;
-	        justify-items: center;
-
-            a{
-	            color: #fff;
-	            text-decoration:center;
-	            display:block;
-	            padding:26px 10px;
-	            font-family: sans-serif;
-	            justify-items: center;
-            }
-        
-        }
-
-    }
+  margin: 0;
+  padding: 0;
+  
 
 }
-*/
-    
+/* end html & body */
+
+
+/* NavBar Design */
 .navbar {
     background-color: #673801;
     color: white;
     padding: 10px 20px;
+   
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between; 
 }
+
 .navbar-container img {
     width: 7%;
 }
@@ -122,8 +91,8 @@ nav {
 }
 
 .navbar-logo {
-    max-height: 60px; /* Limit the maximum height of the logo */
-    height: auto; /* Maintain aspect ratio */
+    max-height: 60px; 
+    height: auto; 
   }
 
 /* Styles responsives */
@@ -142,68 +111,229 @@ nav {
         display: block;
     }
 }
+/***************** End NavBar  *********************/
 
-/* Sliding backgrounds  */
-.slider {
-    width: 100%;
-    height: 1000vh;
-    position: relative;
-    overflow: hidden;
+/************************** main design ***********/
+/*
+.main{
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 20%;
+  padding-right: 20%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  background-image: url('../images/homePics/bgd1.jpg');
+  background-size: cover;
+  background-position: 0 0;
+  animation: slideBackground 10s linear infinite;
+ background-repeat: no-repeat;
+  text-anchor: middle;
+}
+
+@keyframes slideBackground {
+  0% {
+      background-position: 0 0;
   }
-  
-  .slides {
-    display: flex;
-    width: 300%; /* Number of slides */
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
+  100% {
+      background-position: -100% 0;
   }
-  
-  .slide {
-    flex: 1 0 100%;
-    height: 100%;
-  }
-  
-  .slide img {
-    width: 100%; /* Make images take full width */
-    height: auto; /* Adjust height automatically */
-    object-fit: fill; /* Ensure images cover the slide */
-  }
-  
-  button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 1rem;
-    transform: translateY(-50%);
-    z-index: 1000;
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background-image: url('../images/homePics/bgd2.jpg'), url('../images/homePics/bgd3.jpg');
+  background-size: cover;
+  background-position: 0 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  animation: slideBackground 10s linear infinite;
+}
+
+.main h1{
+  margin-top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.main_ctn{
+  padding: 200px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+*/
+/********************* End main design **************/
+
+/********************* Carousel style ***************/
+.carrousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+  width: 300%;
+  height: 100%;
+}
+
+.slide {
+  width: 100vw;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  position: relative;
+  color: white; /* Couleur du texte /
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  / background-color: rgba(0, 0, 0, 0.5); Fond semi-transparent pour le texte */
+  padding: 20px;
+
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 65px;
+}
+p{
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+  margin-top: -60px;
+}
+
+.next {
+  right: 10px;
+  margin-top: -60px;
+}
+/******************* end carousel ******************/
+
+/******************** FOOter **************************/
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  background-color: #2d2e33;
+  padding: 60px 10%;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer-col{
+  width: 25%;
+}
+
+.footer-col h4{
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #f1bc0d;
+  text-transform: capitalize;
+}
+
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  background-color: #27c0ac;
+  height: 2px;
+  width: 40px;
+}
+
+ul li:not(:last-child){
+  margin-bottom: 8px;
+}
+
+ul li a{
+  display: block;
+  font-size: 19px;
+  text-transform: capitalize;
+  color: #bdb6b6;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+ul li a:hover{
+  color: white;
+  padding-left: 2px;
+}
+
+.links a{
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  color: white;
+  background-color: rgba(40, 130, 214, 0.8);
+  margin: 0 8px 8px 0;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.links a:hover{
+  color: #4d4f55;
+  background-color: white;
+}
+
+@media(max-width: 740px){
+  .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+      text-align: center;
   }
 
-  /* Responsive styles */
-@media (max-width: 768px) {
-    button {
-      padding: 0.5rem;
-      font-size: 1.5rem;
-    }
+  .footer-col h4::before{
+      all: unset;
   }
-  
-  @media (max-width: 480px) {
-    button {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-  
-    .slide img {
-      object-fit: cover;
-    }
+}
+
+@media(max-width: 555px){
+  .footer-col{
+      width: 100%;
   }
+}
+/***************************** end footer *********************/
+
