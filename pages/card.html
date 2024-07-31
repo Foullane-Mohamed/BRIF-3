@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصنيف التربة - مدينة أسفي</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="../style/card.css">
+    
+</head>
+<body>
+
+    <nav>
+        
+    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- <a href="#" class="navbar-logo">MonSite</a> -->
+    
+                 <img src="../image/LOGO.png" alt="LOGO">
+                <ul class="navbar-menu">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Plus</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="captionText">
+                <p>
+                    safi
+                   </p>
+               </div>
+        <section id="map-container">
+           
+               
+            <div id="map"></div>
+        </section>
+    </div>
+    </main>
+    <div class="titre"><h3>les élément de fertilisation</h3> </div>
+    <div class="card-container" id="redirectButton">
+        
+        <div class="card">
+          <img src="../images/azote.png" alt="" srcset="">
+          <div class="card-content">
+          <h3>Azote</h3>
+       <p >
+        L'azote est un élément tout aussi crucial et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
+       </p>
+    </div>
+    </div>
+    <div class="card">
+        <img src="../images/phosphore.png" alt="" srcset="">
+        <div class="card-content">
+        <h3>phosphore</h3>
+     <p >
+      L'azote est un élément tout aussi crucial et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
+     </p>
+    </div>
+    </div>
+    <div class="card">
+        <img src="../images/potassium.png" alt="" srcset="">
+        <div class="card-content">
+        <h3>potasume</h3>
+     <p >
+      L'azote est un élément tout aussi crucial et fondamental pour la nutrition des plantes. Il joue un rôle central dans de nombreux processus physiologiques et biochimiques. Sur le plan structurel, l'azote est un composant essentiel des acides aminés, qui sont les blocs de construction des protéines. Les protéines sont vitales pour la croissance et la réparation des tissus végétaux. De plus, l'azote est un constituant des acides nucléiques (ADN et ARN), qui sont indispensables pour la division cellulaire et la reproduction des plantes.
+     </p>
+    </div>
+    </div>
+       </div>
+      <!-- Modal pour afficher l'image agrandie -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+      
+      <script>
+        // Récupère la modal
+        var modal = document.getElementById("myModal");
+      
+        // Récupère l'image et l'insère dans la modal - utilise son attribut "alt" comme légende
+        var images = document.querySelectorAll(".card img");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+      
+        images.forEach(img => {
+          img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+          }
+        });
+      
+        // Récupère l'élément <span> qui ferme la modal
+        var span = document.getElementsByClassName("close")[0];
+      
+        // Lorsque l'utilisateur clique sur <span> (x), ferme la modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+      
+        // Lorsque l'utilisateur clique n'importe où en dehors de la modal, ferme la modal
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+<!-- 
+       <i class="fa-solid fa-envelope"></i> -->
+ 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- <script src="https://api.mapbox.com/mapbox-gl-js/v2.16.0/mapbox-gl.js"></script> -->
+
+
+    <script src="../script/card.js"></script>
+</body>
+</html>
+
