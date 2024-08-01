@@ -3,17 +3,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> khaoula
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #4CAF50;
-<<<<<<< HEAD
-=======
   background-color: #f8f1e0b6;
 }
 
@@ -179,31 +168,11 @@ header {
 {
  
   background-color: #e8dab2;
->>>>>>> kaoutar
-=======
->>>>>>> khaoula
   color: white;
   padding: 10px;
   text-align: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> khaoula
-main {
-  padding: 20px;
-}
-
-#map-container {
-  height: 500px;
-  width: 100%;
-}
-
-#map {
-  height: 100%;
-<<<<<<< HEAD
-=======
 .titre h3{
   text-align: center;
   font-size: 25px;
@@ -455,7 +424,4 @@ ul li a:hover{
   .footer-col{
       width: 100%;
   }
->>>>>>> kaoutar
-=======
->>>>>>> khaoula
 }
