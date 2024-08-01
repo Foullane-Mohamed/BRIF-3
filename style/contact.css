@@ -622,3 +622,8 @@ ul li a:hover{
       display: block;
   }
 }
+
+#addFieldButton{
+  margin-top: 10px;
+  margin-bottom: 10 px;
+}

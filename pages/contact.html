@@ -83,18 +83,25 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form id="contact-form" action="https://formspree.io/f/mblrogor" method="POST">
+          <form id="contactForm" action="https://formspree.io/f/mblrogor" method="POST" >
+            <div id="dynamicFields">
+              <div class="form-group">
             <label for="name">Nom complet</label>
             <input type="text" id="name" name="name" required>
-
+              </div>
+              <div class="form-group">
             <label for="email">Adresse e-mail</label>
             <input type="email" id="email" name="email" required>
-
+            </div>
+            <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button style="margin-top: 30px;" type="submit">Envoyer</button>
-            <!-- <button type="button" id="addFieldButton">nouvelle  champe</button> -->
+            </div>
+            <div class="form-group">
+            <button style="margin-top: 30px;" type="submit" id="submit">Envoyer</button>
+            <button type="button" id="addFieldButton">nouvelle  champe</button>
+            </div>
+          </div>
         </form>
         </div>
       </div>
@@ -144,4 +151,4 @@
     <script src="../script/contact.js"></script>
   </body>
 </html>
-Contactez-nous pour en savoir plus sur les analyses de sol
+<!-- Contactez-nous pour en savoir plus sur les analyses de sol -->

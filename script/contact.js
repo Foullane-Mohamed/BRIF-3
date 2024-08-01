@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const dynamicFields = document.getElementById('dynamicFields');
+    const addFieldButton = document.getElementById('addFieldButton');
+  
+    addFieldButton.addEventListener('click', function () {
+      const newField = document.createElement('div');
+      newField.className = 'form-group';
+  
+      
+  
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.name = 'additionalField';
+      input.placeholder = 'Enter additional information';
+      newField.appendChild(input);
+  
+      dynamicFields.appendChild(newField);
+    });
+  
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Form submitted!');
+      // You can handle the form submission here (e.g., send data to the server)
+    });
+  });
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
