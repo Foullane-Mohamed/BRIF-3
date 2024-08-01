@@ -119,7 +119,7 @@ body {
     background-position: center;
     flex-shrink: 0;
     position: relative;
-    color: white; /* Couleur du texte */
+    color: white; 
 }
 
 .content {
