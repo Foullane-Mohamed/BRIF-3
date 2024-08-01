@@ -1,138 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ibtissam Labibi">
+    <meta name="description" content="Basic Web page qui donne multiples informations sur les analyses du Sol">
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="./scripts/home.js" async></script>
+    <title>Les analyses du Sol</title>
+</head>
+<body>
+    
+    <!--------------------------------START NAV-BAR--------------------------------------------->
+    <header>
+        <nav>
+            <img src="./images/homePics/logo.png" alt="LOGO" class="navbar-logo">
+            <a href="" class="active">Accueil</a>
+            <a href="">À propos</a>
+            <a href="">Services</a>
+        </nav>
+    </header>
+    <!--------------------------------END NAV-BAR---------------------------------------------->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="HTML, CSS,javaScript">
-        <meta name="author" content="Ibtissam Labibi">
-        <meta name="description" content="Basic Web page qui donne multiples informations sur les analyses du Sol">
-        <meta http-equiv="refresh" content="30">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/home.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <script src="./scripts/home.js" async></script>
-        <title>Les analyses du Sol</title>
-    </head>
-
-    <body>
-       
-        <div class="header">
-            <nav class="navbar">
-                <div class="navbar-container">
-                    <img src="./images/homePics/logo.png" alt="LOGO" class="navbar-logo">
-                    <ul class="navbar-menu">
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Plus</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Option 1</a></li>
-                                <li><a href="#">Option 2</a></li>
-                                <li><a href="#">Option 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
-                </div>
-            </nav>
-        </div>
-
-        <!-----
-        <div class="main">
-           <div class="main_ctn">
-            <h1>Bienvenue chez Organic</h1>
-            <h2>Les analyses du Sol</h2>
-            <p>Découvrez les résultats des analyses de Sols dans 100 points 
-                différents dans la province de SAFI
-            </p>
-           </div>
-        </div>
-        --->
-        <div class="carrousel">
-            <div class="slides">
-                <div class="slide" style="background-image: url('./images/homePics/bgd5.webp');">
-                    <div class="content">
-                        <h1>Analyse des Sols</h1>
-                        <p>L'Art et la Science de Comprendre Votre Terre</p>
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('./images/homePics/bgd1.jpg');">
-                    <div class="content">
-                        <h1>Nos Analyses de Sols en Détail</h1>
-                        <p>Analyse de la composition du sol et des nutriments.</p>
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('./images/homePics/bgd2.jpg');">
-                    <div class="content">
-                        <h1>Contactez-Nous</h1>
-                        <p>Nous sommes à votre écoute.</p>
+    <!------------------------------START MAIN-HOME------------------------------------------------>
+    <div class="carousel">
+        <div class="list">
+            <div class="item" style="background-image: url(./images/homePics/bgd5.webp);">
+                <div class="content">
+                    <div class="title">dans La province de SAFI</div>
+                </div> 
+            </div>
+            <div class="item" style="background-image: url(./images/homePics/bgd4.jpg);">
+                <div class="content">
+                    <div class="title">Bienvenue dans notre site</div>  
+                    <div class="btn">
+                        <button>Contactez-Nous</button>
                     </div>
                 </div>
             </div>
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="item" style="background-image: url(./images/homePics/bgd1.jpg)"></div>
+            <div class="item" style="background-image: url(./images/homePics/bgd3.webp);"></div>
+            <div class="item" style="background-image: url(./images/homePics/bgd2.jpeg);"></div>
+                <div class="content">
+                    <div class="title" >Découvrez les analyses du Sol</div>
+                </div>
+            </div>
         </div>
-
-        <div class="footer">
-            <footer>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Liens Utiles</h4>
-                    <ul>
-                        <li><a href="#">Analyse de Sol</a></li>
-                        <li><a href="#">Consultation</a></li>
-                        <li><a href="#">Formation</a></li>
-                        <li><a href="#">Blog</a></li>
-        
-        
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="#">Adresse : Rue de l'Exemple, Ville, Pays</a></li>
-                        <li><a href="#">Email : info@example.com</a></li>
-                        <li><a href="#">Téléphone : 123-456-7890</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4> Suivez-nous
-        
-                    </h4>
-                    <div class="links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </footer>
+        <!--next prev button-->
+        <div class="arrows">
+            <button class="prev"></button>
+            <button class="next">></button>
         </div>
-        
-    <!----------------------------------------Background------------------------------------------------------------>
-    <!--<section class="slider">
-        <div class="slides">
-          <div class="slide"><img src="./images/homePics/bgd1.jpg" alt="Background1"></div>
-          <div class="slide"><img src="./images/homePics/bgd2.jpg" alt="Background2"></div>
-          <div class="slide"><img src="./images/homePics/bgd3.jpg" alt="Background3"></div>
+        <!-- time running -->
+        <div class="timeRunning"></div>
+    </div>
+    <!---------------------------------END MAIN HOME------------------------------------------------>
+
+    <!----------------------------------START CARDS--------------------------------------------------->
+    <div class="card-container">
+        <div class="card">
+            <img src="./images/homePics/card1.jpg" alt="Card 1">
+            <div class="card-content">
+                <h3>Extractions des échantillons</h3>
+                <p>Avec <span style="font-weight: bold;">Organic </span>découvrez les différentes méthodes de prélevage de vos échantillons.</p>
+            </div>
         </div>
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-    </section>-->
-    <!-------------------------------------->
-   
+        <div class="card">
+            <img src="./images/homePics/card2.jpg" alt="Card 2">
+            <div class="card-content">
+                <h3>Emballage des échantillons</h3>
+                <p>Assurez vous de bien saisir les informations nécessaires sur l'Emballage.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/homePics/card3.jpg" alt="Card 3">
+            <div class="card-content">
+                <h3>Pré-Analyse</h3>
+                <p>Avant d'analyser les compositions du Sol au laboratoire en fait des étapes que vou pouvez découvrir.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/homePics/card4.jpg" alt="Card 4">
+            <div class="card-content">
+                <h3>Analyse</h3>
+                <p>Découvrez comment les compositions sont analysés.</p>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------END CARDS---------------------------------->
 
-    </body>
+    <!--------------------------------Start FOOter---------------------------------------------->
+    <div class="footer">
+        <footer>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="#">Analyse de Sol</a></li>
+                    <li><a href="#">Consultation</a></li>
+                    <li><a href="#">Formation</a></li>
+                    <li><a href="#">Blog</a></li>
+    
+    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Adresse : Rue de l'Exemple, Ville, Pays</a></li>
+                    <li><a href="#">Email : info@example.com</a></li>
+                    <li><a href="#">Téléphone : 123-456-7890</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4> Suivez-nous
+    
+                </h4>
+                <div class="links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-----------------------------END FOOTER---------------------------------------------->
 
+</body> 
 
 </html>
-
