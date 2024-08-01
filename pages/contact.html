@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../style/contact.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+          <!-- <a href="#" class="navbar-logo">MonSite</a> -->
+
+           <img src="../image/LOGO.png" alt="LOGO">
+          <ul class="navbar-menu">
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#">À propos</a></li>
+              <li><a href="#">Services</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">Plus</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Option 1</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+  </nav>
+    <!-- contact -->
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Contactez-nous pour en savoir plus sur les analyses de sol</h3>
+          <p class="text">
+            Veuillez remplir le formulaire ci-dessous pour toute demande d'information ou de précision
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>55 N134 youcode safi</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>testtest@ipsum.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>+212 612345678</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Contactez-nous :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form id="contactForm" action="https://formspree.io/f/mblrogor" method="POST" >
+            <div id="dynamicFields">
+              <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+            <button style="margin-top: 30px;" type="submit" id="submit">Envoyer</button>
+            <button type="button" id="addFieldButton">nouvelle  champe</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <!-- foter -->
+    <footer>
+      <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+      <div class="footer-col">
+          <h4>Liens Utiles</h4>
+          <ul>
+              <li><a href="#">Analyse de Sol</a></li>
+              <li><a href="#">Consultation</a></li>
+              <li><a href="#">Formation</a></li>
+              <li><a href="#">Blog</a></li>
+              
+          </ul>
+      </div>
+      <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+              <li><a href="#">Adresse : Rue de l'Exemple, Ville, Pays</a></li>
+              <li><a href="#">Email : info@example.com</a></li>
+              <li><a href="#">Téléphone : 123-456-7890</a></li>
+          </ul>
+      </div>
+      <div class="footer-col">
+          <h4> Suivez-nous
+
+          </h4>
+          <div class="links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </footer>
+
+    <script src="../script/contact.js"></script>
+  </body>
+</html>
+<!-- Contactez-nous pour en savoir plus sur les analyses de sol -->
